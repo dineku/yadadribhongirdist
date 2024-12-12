@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Yadadri Bhuvanagiri District and its unique culture, history, and temples.">
+    <title>Yadadri Bhuvanagiri District</title>
+
+    <!-- Leaflet.js CSS for map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  
+    <style>
+        /* Global Styles */
+        html, body {
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Style for the watermark logo */
+        .watermark-logo {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+            opacity: 0.1;
+            pointer-events: none;
+        }
+
+        /* Header Section */
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Navigation Menu Styles */
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #007bff;
+        }
+
+        /* Section Styles */
+        section {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        /* Wrapper for the image */
+        .image-wrapper {
+            position: relative;
+            display: inline-block;
+            text-align: center;
+        }
+
+        /* Centered Image Styles */
+        .centered-images img {
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Medium Size for Third and Fourth Image */
+        .medium-size {
+            width: 50%;
+            height: auto;
+        }
+
+        /* Small Logo at Top-Right Corner */
+        .top-right-logo {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 10;
+        }
+
+        .top-right-logo img {
+            width: 50px;
+            height: 50px;
+        }
+
+        /* Footer Styles */
+        footer {
+            padding-top: 20px;
+            padding-bottom: 40px;
+            text-align: center;
+            background-color: #333;
+            color: white;
+            clear: both;
+        }
+
+        /* Map Styles */
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+
+        /* Search Bar */
+        #search-bar {
+            margin: 20px 0;
+        }
+
+        #search {
+            padding: 10px;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        /* Geolocation Button */
+        #geolocation-btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #geolocation-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Location Info Section */
+        #location-info {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Watermark Logo in the center -->
+    <div class="watermark-logo">
+        <img src="kdk_logo.png" alt="Watermark Logo" width="200" height="200">
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <div class="image-wrapper">
+            <img src="YGT_PORT/fort_2.jpg" alt="Bhongir District" style="max-width: 100%; height: auto; border-radius: 8px;">
+            <div class="top-right-logo">
+                <img src="kdk_logo.png" alt="Small Logo" width="50" height="50">
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#revenue-divisions">Revenue Divisions</a></li>
+                <li><a href="#specialties">Specialties</a></li>
+                <li><a href="#temples">Temples</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Overview Section -->
+    <section id="overview">
+        <h2>Overview of Yadadri Bhuvanagiri District</h2>
+        <ul>
+            <li><strong>Yadadri Bhuvanagiri is an important district located in the northeastern part of Telangana...</strong></li>
+            <li><strong>The district was formed on October 11, 2016...</strong></li>
+
+            <div class="centered-images">
+                <img src="YGT_PORT/port_4.jpg" alt="Bhongir Fort View" class="medium-size">
+            </div>
+
+            <li><strong>Kakatiya Dynasty...</strong></li>
+
+            <div class="centered-images">
+                <img src="YGT_PORT/port_3.jpg" alt="Bhongir Fort View" class="medium-size">
+            </div>
+            <li><strong>The Bhongir Fort: The Bhongir fort, located in the district, was built by the Chalukya king Vikramaditya VI in the 11th century...</strong></li>
+            <li><strong>Bhongir to Yadadri Bhuvanagiri...</strong></li>
+            <li><strong>Chalukyas and Kakatiyas...</strong></li>
+            <li><strong>Deccan Sultanates and Qutb Shahi Dynasty...</strong></li>
+            <li><strong>Nizams of Hyderabad...</strong></li>
+            <li><strong>Post-independence...</strong></li>
+        </ul>
+    </section>
+
+    <!-- Revenue Divisions Section -->
+    <section id="revenue-divisions">
+        <h2>Revenue Divisions & Mandals</h2>
+        
+        <h3>Bhongir Revenue Division</h3>
+        <ul>
+            <a href="https://www.google.com/maps/place/Bhongir+Fort/@17.5159,78.8900,15z" target="_blank">
+                <span>&#x2192;</span> Get Directions
+            </a>
+            <li><strong>Bhongir (Bhuvanagiri)</strong>: Known for **Bhongir Fort** and historical temples.</li>
+            <li><strong>Yadagirigutta</strong>: Famous for **Yadadri Lakshmi Narasimha Swamy Temple**, a major pilgrimage site.</li>
+            <li><strong>Aler</strong>: Known for its agricultural produce, especially paddy and cotton.</li>
+            <li><strong>Choutuppal</strong>: Known for its agricultural economy, producing crops like cotton, paddy, and more.</li>
+            <li><strong>Bommalaramaram</strong>: Famous for **handloom weaving** industry.</li>
+        </ul>
+
+        <h3>Choutuppal Revenue Division</h3>
+        <ul>
+            <li><strong>Choutuppal</strong>: A trading hub for **agricultural goods** like paddy and cotton.</li>
+            <li><strong>Pochampally</strong>: Known for **Ikat weaving** (Pochampally Ikat), a heritage village for handloom textiles.</li>
+            <li><strong>Kondamallepally</strong>: Known for crops like **groundnut** and **sunflower**.</li>
+            <li><strong>Malkapur</strong>: Famous for its agricultural produce such as **groundnut**, **tomato**, and **chili**.</li>
+        </ul>
+    </section>
+
+    <!-- Interactive Map Section -->
+    <section id="interactive-map">
+        <h2>Interactive Map of Yadadri Bhuvanagiri</h2>
+        <div id="map"></div>
+    </section>
+
+    <!-- Search Bar for Map -->
+    <div id="search-bar">
+        <input type="text" id="search" placeholder="Search for a location..." style="width: 100%; padding: 10px; border-radius: 5px;">
+    </div>
+
+    <!-- Geolocation Button -->
+    <button id="geolocation-btn">Locate Me</button>
+
+    <!-- Location Info Section -->
+    <div id="location-info"></div>
+
+    <!-- Specialties Section -->
+    <section id="specialties">
+        <h2>Specialties of Yadadri Bhuvanagiri</h2>
+        <p>
+            Yadadri Bhuvanagiri is known for its unique blend of **religious tourism**, **agriculture**, and **handicrafts**.
+        </p>
+        <ul>
+            <li><strong>Religious Tourism</strong>: Home to the **Yadadri Temple** and **Bhongir Fort**, the district is a significant religious and historical destination.</li>
+            <li><strong>Agriculture</strong>: Known for the cultivation of **paddy, cotton**, and **turmeric**.</li>
+            <li><strong>Handicrafts</strong>: Famous for **Pochampally Ikat** and handloom weaving industries.</li>
+        </ul>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Yadadri Bhuvanagiri District Website. All rights reserved.</p>
+    </footer>
+
+    <!-- Leaflet.js Script for Map Functionality -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([17.5159, 78.8900], 12); // Centered on Yadadri Bhuvanagiri
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        var marker = L.marker([17.5159, 78.8900]).addTo(map)
+            .bindPopup("Yadadri Bhuvanagiri")
+            .openPopup();
+        
+        document.getElementById('geolocation-btn').addEventListener('click', function () {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function (position) {
+                    var userLat = position.coords.latitude;
+                    var userLon = position.coords.longitude;
+
+                    var userMarker = L.marker([userLat, userLon]).addTo(map)
+                        .bindPopup("Your Location")
+                        .openPopup();
+
+                    map.setView([userLat, userLon], 14);
+                    document.getElementById('location-info').innerHTML = `
+                        Latitude: ${userLat}, Longitude: ${userLon}
+                    `;
+                });
+            } else {
+                alert("Geolocation is not supported by this browser.");
+            }
+        });
+    </script>
+</body>
+</html>
+

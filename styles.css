@@ -1,0 +1,143 @@
+/* Global Styles */
+html, body {
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Style for the watermark logo */
+.watermark-logo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+/* Header Section */
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Navigation Menu Styles */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+/* Section Styles */
+section {
+    margin-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+h2 {
+    color: #333;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Wrapper for the image */
+.image-wrapper {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Centered Image Styles */
+.centered-images img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Medium Size for Third and Fourth Image */
+.medium-size {
+    width: 50%;
+    height: auto;
+}
+
+/* Small Logo at Top-Right Corner */
+.top-right-logo {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+}
+
+.top-right-logo img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Footer Styles */
+footer {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    text-align: center;
+    background-color: #333;
+    color: white;
+    clear: both;
+}
+
+/* Map Styles */
+#map {
+    height: 400px;
+    width: 100%;
+}
+
+/* Search Bar */
+#search-bar {
+    margin: 20px 0;
+}
+
+#search {
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+/* Geolocation Button */
+#geolocation-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#geolocation-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Location Info Section */
+#location-info {
+    margin-top: 20px;
+}
+
